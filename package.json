@@ -1,0 +1,44 @@
+{
+  "name": "ionc-tokens",
+  "version": "1.0.0",
+  "description": "IonChain",
+  "scripts": {
+    "build": "tsc && truffle compile",
+    "test": "npm run build && node run-tests.js"
+  },
+  "author": "Pavel Motyrev <motyrev@softmotions.com>",
+  "license": "private",
+  "dependencies": {
+    "ajv": "^6.1.1",
+    "bignumber.js": "4.0.2",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "ethereumjs-tx": "latest",
+    "js-yaml": "^3.10.0",
+    "merge-stream": "^1.0.1",
+    "moment": "^2.20.1",
+    "morgan": "^1.9.0",
+    "node-async-router": "^0.0.2",
+    "truffle-contract": "^3.0.2",
+    "truffle-flattener": "^1.2.5",
+    "tslib": "^1.9.0",
+    "web3": "0.20.3",
+    "web3-provider-engine": "latest",
+    "web3-typed": "https://github.com/Softmotions/web3-typed.git"
+  },
+  "devDependencies": {
+    "@types/bignumber.js": "4.0.2",
+    "@types/bluebird-global": "^3.5.3",
+    "@types/chai": "4.0.4",
+    "@types/express": "^4.11.0",
+    "@types/knex": "^0.14.1",
+    "@types/merge-stream": "^1.1.0",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^9.3.0",
+    "ganache-cli": "^6.0.3",
+    "json-schema-to-typescript": "^5.3.2",
+    "truffle": "^4.0.6",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.1"
+  }
+}

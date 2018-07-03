@@ -1,0 +1,109 @@
+{
+  "$id": "ICliConfig",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "definitions": {},
+  "properties": {
+    "ethereum": {
+      "type": "object",
+      "properties": {
+        "endpoint": {
+          "type": "string",
+          "description": "Network endpoint URL"
+        },
+        "lockfilesDir": {
+          "type": "string",
+          "description": "Directory where contract deployment lock files stored"
+        },
+        "from": {
+          "type": "string",
+          "pattern": "^0x[a-zA-Z0-9]{40}$",
+          "description": "Network from address"
+        },
+        "gas": {
+          "type": "string",
+          "description": "Default Gas limit",
+          "pattern": "^\\d+(e\\d+)?$"
+        },
+        "gasPrice": {
+          "type": "string",
+          "description": "Default Gas price",
+          "pattern": "^\\d+(e\\d+)?$"
+        },
+        "IonChain": {
+          "type": "object",
+          "description": "Ionc token contract",
+          "properties": {
+            "schema": {
+              "type": "string",
+              "description": "Path to the contract schema"
+            },
+            "totalSupplyTokens": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "schema",
+            "totalSupplyTokens"
+          ]
+        },
+        "IonChainICO": {
+          "type": "object",
+          "description": "Ionc token ICO contract",
+          "properties": {
+            "schema": {
+              "type": "string",
+              "description": "Path to the contract schema"
+            },
+            "teamWallet": {
+              "type": "string",
+              "pattern": "^0x[a-zA-Z0-9]{40}$",
+              "description": "Team wallet address on network"
+            },
+            "tokenHolder": {
+              "type": "string",
+              "pattern": "^0x[a-zA-Z0-9]{40}$",
+              "description": "Token holder address on network"
+            },
+            "lowCapWei": {
+              "type": "string",
+              "pattern": "^\\d+(e\\d+)?$"
+            },
+            "hardCapWei": {
+              "type": "string",
+              "pattern": "^\\d+(e\\d+)?$"
+            },
+            "lowCapTxWei": {
+              "type": "string",
+              "pattern": "^\\d+(e\\d+)?$"
+            },
+            "hardCapTxWei": {
+              "type": "string",
+              "pattern": "^\\d+(e\\d+)?$"
+            }
+          },
+          "required": [
+            "schema",
+            "teamWallet",
+            "tokenHolder",
+            "lowCapWei",
+            "hardCapWei",
+            "lowCapTxWei",
+            "hardCapTxWei"
+          ]
+        }
+      },
+      "required": [
+        "endpoint",
+        "from",
+        "lockfilesDir",
+        "gas",
+        "gasPrice",
+        "IonChain"
+      ]
+    }
+  },
+  "required": [
+    "ethereum"
+  ]
+}
